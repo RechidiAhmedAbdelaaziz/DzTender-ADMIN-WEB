@@ -1,0 +1,63 @@
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Development Web",
+			"request": "launch",
+			"type": "dart",
+			"program": "lib/main_dev.dart",
+			"args": [
+				"--web-browser-flag=--disable-web-security",
+				"--web-port",
+				"8000"
+			]
+		},
+
+		{
+			"name": "Development",
+			"request": "launch",
+			"type": "dart",
+			"program": "lib/main_dev.dart",
+			"args": [
+				"--target",
+				"lib/main_dev.dart",
+				
+			]
+		},
+
+		
+
+		// Production
+		{
+			"name": "Production",
+			"request": "launch",
+			"type": "dart",
+			"program": "lib/main_production.dart",
+			"args": [
+				"--flavor",
+				"production",
+				"--target",
+				"lib/main_production.dart"
+			]
+		},
+
+		//Release
+		{
+			"name": "Release",
+			"request": "launch",
+			"type": "dart",
+			"program": "lib/main_release.dart",
+			"args": [
+				"--release",
+				"--flavor",
+				"production",
+				"--target",
+				"lib/main_production.dart"
+			]
+		}
+	],
+	"compounds": []
+}
